@@ -59,8 +59,17 @@
   animation: fadeSlide 1s ease-out;
 }
 
+.profile-section {
+  display: flex;
+  align-items: center;   /* vertically aligns */
+  justify-content: center; /* centers the whole thing */
+  gap: 20px; /* space between image and text */
+}
 
-@keyframes gradientMove {
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+}@keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -85,6 +94,10 @@
 
 <body>
 <canvas id="particles"></canvas>
+  <div class="profile-section">
+  <img src="me.jpg" class="profile-img">
+
+  <div>
 <div class="container">
   <h1>Hello, I'm Daniel Li</h1>
   <p>Welcome to my website</p>
@@ -156,7 +169,6 @@ window.addEventListener("resize", () => {
   init();
 });
 </script>
-<img src="me.jpg" style="width:130px; border-radius:50%;position:absolute; top:110px; left:300px;alt="Daniel Li, a young professional with a friendly expression>
 </body>
 
 </html>
